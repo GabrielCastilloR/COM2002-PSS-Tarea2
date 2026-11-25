@@ -40,6 +40,7 @@ static long contar_archivo(const char *nombre, const char *patron){
     fclose(archivo);
     return conteo;
 }
+
 static void *buscar_hilo(void *argumento){
     DatosHilos *datos = argumento;
     while (1) {
@@ -57,8 +58,8 @@ static void *buscar_hilo(void *argumento){
     }
     return NULL;
 }
-static void buscar_hijo(int escritura, char *argv[], int argc, int turno, int procesos)
-{
+
+static void buscar_hijo(int escritura, char *argv[], int argc, int turno, int procesos){
     FILE *salida = fdopen(escritura, "w");
     if (salida == NULL) {
 	perror("fdopen");
@@ -78,12 +79,12 @@ static void buscar_hijo(int escritura, char *argv[], int argc, int turno, int pr
     }
     _exit(0);
 }
+
 int main(int argc, char* argv[]){
     if (argc > 1 && strcmp(argv[1], "-f") == 0){
 	if (argc < 5) {
 	    fprintf(stderr, "Uso: %s -f PATRON N ARCHIVO...\n", argv[0]);
 	    return 2;
-
 	}
 	char *fin;
 	long cantidad = strtol(argv[3], &fin, 10);
@@ -94,120 +95,120 @@ int main(int argc, char* argv[]){
 	}
     int archivos = argc -4;
     int procesos = (int)cantidad;
-    if (procesos > archivos){
-	procesos = archivos;
-    }
+    if (procesos > archivos) procesos = archivos;
     long *resultados = malloc(archivos * sizeof(*resultados));
-    if(resultados == NULL){
-	perror("malloc");
-	return 2;
+    
+	if(resultados == NULL){
+		perror("malloc");
+		return 2;
     }
-    for (int i = 0; i < archivos; i++){
-	resultados[i] = -1;
-    }
-    pid_t hijos[64];
-    int lecturas[64];
+    
+	for (int i = 0; i < archivos; i++) resultados[i] = -1;
+
+    pid_t hijos[N_THREAD];
+    int lecturas[N_THREAD];
     int creados = 0;
     int error = 0;
     for (int k = 0; k < procesos; k++){
-	int canal[2];
-	if (pipe(canal) == -1){
-	    perror("pipe");
-	    error = 1;
-	    break;
-	}
-	pid_t hijo = fork();
-	if (hijo == -1){
-	    perror("fork");
-	    close(canal[0]);
-	    close(canal[1]);
-	    error = 1;
-	    break;
-	}
-	if (hijo == 0){
-	    close(canal[0]);
-	    for (int j= 0; j < k; j++){
-	        close(lecturas[j]);
-	    }
-	    buscar_hijo(canal[1], argv, argc,  k, procesos);
-	}
-	close(canal[1]);
-	hijos[k] = hijo;
-	lecturas[k] = canal[0];
-	creados++;
+		int canal[2];
+		if (pipe(canal) == -1){
+			perror("pipe");
+			error = 1;
+			break;
+		}
+		pid_t hijo = fork();
+		if (hijo == -1){
+			perror("fork");
+			close(canal[0]);
+			close(canal[1]);
+			error = 1;
+			break;
+		}
+		if (hijo == 0){
+			close(canal[0]);
+			for (int j= 0; j < k; j++){
+				close(lecturas[j]);
+			}
+			buscar_hijo(canal[1], argv, argc,  k, procesos);
+		}
+		close(canal[1]);
+		hijos[k] = hijo;
+		lecturas[k] = canal[0];
+		creados++;
     }
 
     //Guardar los conteos en el orden de los archivos
     for (int k = 0; k < creados; k++){
-	FILE *entrada = fdopen(lecturas[k], "r");
-	if (entrada == NULL){
-	    perror("fdopen");
-	    close(lecturas[k]);
-	    error = 1;
-	    continue;
-	}
-	int i = k;
-	long conteo;
-	while (fscanf(entrada, "%ld", &conteo) == 1){
-	    if (i >= archivos){
-	        error = 1;
-		break;
-	    }
-	    resultados[i] = conteo;
-	    i += procesos;
-	}
-	if (!feof(entrada) || i < archivos){
-	    error = 1;
-	}
-	fclose(entrada);
+		FILE *entrada = fdopen(lecturas[k], "r");
+		if (entrada == NULL){
+			perror("fdopen");
+			close(lecturas[k]);
+			error = 1;
+			continue;
+		}
+		int i = k;
+		long conteo;
+		while (fscanf(entrada, "%ld", &conteo) == 1){
+			if (i >= archivos){
+				error = 1;
+			break;
+			}
+			resultados[i] = conteo;
+			i += procesos;
+		}
+		if (!feof(entrada) || i < archivos){
+			error = 1;
+		}
+		fclose(entrada);
     }
     for (int k = 0; k < creados; k++){
-	int estado;
-	if (waitpid(hijos[k], &estado, 0) == -1){
-	    perror("waitpid");
-	    error = 1;
-	} else if (WIFSIGNALED(estado)){
-	    fprintf(stderr, "hgrep: hijo %d termino por la señal %d\n",
-		    k + 1, WTERMSIG(estado));
-	    error = 1;
-	} else if (!WIFEXITED(estado) || WEXITSTATUS(estado) != 0){
-	    error = 1;
+		int estado;
+		if (waitpid(hijos[k], &estado, 0) == -1){
+			perror("waitpid");
+			error = 1;
+		} else if (WIFSIGNALED(estado)){
+			fprintf(stderr, "hgrep: hijo %d termino por la señal %d\n",
+				k + 1, WTERMSIG(estado));
+			error = 1;
+		} else if (!WIFEXITED(estado) || WEXITSTATUS(estado) != 0){
+			error = 1;
+		}
+		}
+		int coincidencias = 0;
+		for (int i = 0; i < archivos; i++){
+		if (resultados[i] < 0){
+			error = 1;
+			continue;
+		}
+		if (archivos > 1){
+			printf("%s:", argv[4 + i]);
+		}
+		printf("%ld\n", resultados[i]);
+		if (resultados[i] > 0){
+			coincidencias = 1;
+		}
+		}
+		free(resultados);
+		if (error){
+			return 2;
+		}
+		if (coincidencias){
+		return 0;
+		}
+		return 1;
 	}
-    }
-    int coincidencias = 0;
-    for (int i = 0; i < archivos; i++){
-	if (resultados[i] < 0){
-	    error = 1;
-	    continue;
-	}
-	if (archivos > 1){
-	    printf("%s:", argv[4 + i]);
-	}
-	printf("%ld\n", resultados[i]);
-	if (resultados[i] > 0){
-	    coincidencias = 1;
-	}
-    }
-    free(resultados);
-    if (error){
-        return 2;
-    }
-    if (coincidencias){
-	return 0;
-    }
-    return 1;
-}
 
     //Control de cantidad de argumentos
     if (argc < 4){
-	fprintf(stderr, "Uso: %s PATRON N ARCHIVO...\n", argv[0]);
-	return 2;
+		fprintf(stderr, "Uso: %s PATRON N ARCHIVO...\n", argv[0]);
+		return 2;
     }
+
     char *endPtr;
     long nThread = strtol(argv[2], &endPtr, 10);
     if (endPtr == argv[2] || *endPtr != '\0' || nThread < 1 || nThread > N_THREAD){
-	fprintf(stderr, "Uso: %s PATRON N ARCHIVO CON N ENTRE 1 Y 64...\n", argv[0]);
-	return 2;
+		fprintf(stderr, "Uso: %s PATRON N ARCHIVO CON N ENTRE 1 Y 64...\n", argv[0]);
+		return 2;
     }
     
     DatosHilos datos;
@@ -216,60 +217,54 @@ int main(int argc, char* argv[]){
     datos.cantidad = argc -3;
     datos.siguiente = 0;
     
-    if (nThread > datos.cantidad){
-	nThread = datos.cantidad;
-    }
-    datos.resultados = malloc(datos.cantidad * sizeof(*datos.resultados));
+    if (nThread > datos.cantidad) nThread = datos.cantidad;
+    
+	datos.resultados = malloc(datos.cantidad * sizeof(*datos.resultados));
     if (datos.resultados == NULL){
-	perror("malloc");
-	return 2;
+		perror("malloc");
+		return 2;
     }
 
     if (pthread_mutex_init(&datos.mutex, NULL) != 0){
-	fprintf(stderr, "hgrep: no se pudo inicializar el mutex\n");
-	free(datos.resultados);
-	return 2;
+		fprintf(stderr, "hgrep: no se pudo inicializar el mutex\n");
+		free(datos.resultados);
+		return 2;
     }
     pthread_t hilos[N_THREAD];
     int creados = 0;
     for (int i = 0; i < nThread; i++){
-	int codigo = pthread_create(&hilos[i], NULL, buscar_hilo, &datos);
-	if (codigo != 0){
-	    fprintf(stderr, "hgrep: %s\n", strerror(codigo));
-	    break;
-	}
-	creados++;
+		int codigo = pthread_create(&hilos[i], NULL, buscar_hilo, &datos);
+		if (codigo != 0){
+			fprintf(stderr, "hgrep: %s\n", strerror(codigo));
+			break;
+		}
+		creados++;
     }
-    for (int i = 0; i < creados; i++){
-	pthread_join(hilos[i], NULL);
-    }
-    int error = creados != nThread;
+    for (int i = 0; i < creados; i++) pthread_join(hilos[i], NULL);
+    
+	int error = creados != nThread;
     int coincidencias = 0;
     if (creados == nThread){
-	for (int i = 0; i < datos.cantidad; i++){
-	    long conteo = datos.resultados[i];
+		for (int i = 0; i < datos.cantidad; i++){
+			long conteo = datos.resultados[i];
 
-	    if (conteo < 0){
-	        error = 1;
-		continue;
-	    }
-	    if (datos.cantidad > 1){
-		printf("%s:", datos.archivos[i]);
-	    }
-	    printf("%ld\n", conteo);
-	    if (conteo > 0){
-		coincidencias = 1;
-	    }
-	}
+			if (conteo < 0){
+				error = 1;
+				continue;
+			}
+			if (datos.cantidad > 1){
+				printf("%s:", datos.archivos[i]);
+			}
+			printf("%ld\n", conteo);
+			if (conteo > 0){
+				coincidencias = 1;
+			}
+		}
     }
     pthread_mutex_destroy(&datos.mutex);
     free(datos.resultados);
 
-    if (error){
-	return 2;
-    }
-    if (coincidencias){
-	return 0;
-    }
-return 1;
+    if (error) return 2;
+    if (coincidencias) return 0;
+	return 1;
 }
