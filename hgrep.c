@@ -272,7 +272,14 @@ static int execHilos(int argc, char *argv[], int boolP){
 	}
 
 	if (pthread_mutex_init(&datos.mutex, NULL) != 0){
-		fprintf(stderr, "hgrep: no se pudo inicializar la variable condición(mutex)\n");
+		fprintf(stderr, "hgrep: no se pudo inicializar mutex\n");
+		pthread_mutex_destroy(&datos.mutex);
+		free(datos.resultados);
+		return 2;
+	}
+
+	if (pthread_cond_init(&datos.cond, NULL) != 0){
+		fprintf(stderr, "hgrep: no se pudo inicializar variable de condición\n");
 		pthread_mutex_destroy(&datos.mutex);
 		free(datos.resultados);
 		return 2;
