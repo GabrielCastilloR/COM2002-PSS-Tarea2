@@ -912,4 +912,392 @@ codigo: 126
 [?2004h]0;thorne@Gabriel: ~/pss/tarea2[01;32mthorne@Gabriel[00m:[01;34m~/pss/tarea2[00m$ code src/hgrep.c
 [?2004l[?2004h]0;thorne@Gabriel: ~/pss/tarea2[01;32mthorne@Gabriel[00m:[01;34m~/pss/tarea2[00m$ cp datos ../../L[K[K[K[K[K[K[K[7mprintf(stderr, "Uso: %s [-p | -f] PATRON N ARCHIVO... (N entre 1 y 64)\n", argv[0]);[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cprintf(stderr, "Uso: %s [-p | -f] PATRON N ARCHIVO... (N entre 1 y 64)\n", argv[0]);[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;[K[7m/mnt/c/Users/gabri/OneDrive/Desktop/LocalGit/Personal_Repos/Universidad/Programacion_Software_Sistemas/T2[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/mnt/c/Users/gabri/OneDrive/Desktop/LocalGit/Personal_Repos/Universidad/Programacion_Software_Sistemas/T2/dat os
 [?2004lcp: -r not specified; omitting directory 'datos'
-[?2004h]0;thorne@Gabriel: ~/pss/tarea2[01;32mthorne@Gabriel[00m:[01;34m~/pss/tarea2[00m$ cp datos /mnt/c/Users/gabri/OneDrive/Desktop/LocalGit/Personal_Repos/Universidad/Programacion_Software_Sistemas/T2/datos[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-/mnt/c/Users/gabri/OneDrive/Desktop/LocalGit/Personal_Repos/Universidad/Programacion_Software_Sistemas/T2/datos[A]0;thorne@Gabriel: ~/pss/tarea2[01;32mthorne@Gabriel[00m:[01;34m~/pss/tarea2[00m$ [C[C[C[C[C[C[C[C[C[Cr/mnt/c/Users/gabri/OneDrive/Desktop/LocalGit/Personal_Repos/Universidad/Programacion_Software_Sistemas/T2/da[1@t[A]0;thorne@Gabriel: ~/pss/tarea2[01;32mthorne@Gabriel[00m:[01;34m~/pss/tarea2[00m$ [C[C[C[C[C[C[C[C[C[C[C /mnt/c/Users/gabri/OneDrive/Desktop/LocalGit/Personal_Repos/Universidad/Programacion_Sof
+[?2004h]0;thorne@Gabriel: ~/pss/tarea2[01;32mthorne@Gabriel[00m:[01;34m~/pss/tarea2[00m$ cp datos /mnt/c/Users/gabri/OneDrive/Desktop/LocalGit/Personal_Repos/Universidad/Programacion_Software_Sistemas/T2/datos[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-/mnt/c/Users/gabri/OneDrive/Desktop/LocalGit/Personal_Repos/Universidad/Programacion_Software_Sistemas/T2/datos[A]0;thorne@Gabriel: ~/pss/tarea2[01;32mthorne@Gabriel[00m:[01;34m~/pss/tarea2[00m$ [C[C[C[C[C[C[C[C[C[Cr/mnt/c/Users/gabri/OneDrive/Desktop/LocalGit/Personal_Repos/Universidad/Programacion_Software_Sistemas/T2/da[1@t[A]0;thorne@Gabriel: ~/pss/tarea2[01;32mthorne@Gabriel[00m:[01;34m~/pss/tarea2[00m$ [C[C[C[C[C[C[C[C[C[C[C /mnt/c/Users/gabri/OneDrive/Desktop/LocalGit/Personal_Repos/Universidad/Programacion_Software_Sistemas/T2/d[1@a[A]0;thorne@Gabriel: ~/pss/tarea2[01;32mthorne@Gabriel[00m:[01;34m~/pss/tarea2[00m$ [C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C
+[?2004l[?2004h]0;thorne@Gabriel: ~/pss/tarea2[01;32mthorne@Gabriel[00m:[01;34m~/pss/tarea2[00m$ i[Kdir [7m/mnt/c/Users/gabri/OneDrive/Desktop/LocalGit/Personal_Repos/Universidad/Programacion_Software_Sistemas/T2[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/mnt/c/Users/gabri/OneDrive/Desktop/LocalGit/Personal_Repos/Universidad/Programacion_Software_Sistemas/T2/datos[K[K[K[K[K[K
+[?2004lGabrielCastillo.log  README.md	datos  hgrep.c	p2_isolated.c  registro_Soto.txt
+[?2004h]0;thorne@Gabriel: ~/pss/tarea2[01;32mthorne@Gabriel[00m:[01;34m~/pss/tarea2[00m$ dir /mnt/c/Users/gabri/OneDrive/Desktop/LocalGit/Personal_Repos/Universidad/Programacion_Software_Sistemas/T2/datos
+[?2004lnum1.txt  num2.txt  num3.txt  num4.txt	num5.txt  num6.txt  num7.txt  num8.txt	text.txt  texto.txt  vacio.txt
+[?2004h]0;thorne@Gabriel: ~/pss/tarea2[01;32mthorne@Gabriel[00m:[01;34m~/pss/tarea2[00m$ [K]0;thorne@Gabriel: ~/pss/tarea2[01;32mthorne@Gabriel[00m:[01;34m~/pss/tarea2[00m$ cat src/hgrep.c
+[?2004l#define _POSIX_C_SOURCE 200809L 
+#include <errno.h> 
+#include <stdio.h> 
+#include <stdlib.h> 
+#include <string.h> 
+#include <pthread.h> 
+#include <unistd.h> 
+#include <sys/wait.h>
+
+#define N_THREAD 64
+
+typedef struct {
+	// Para modo -f
+    const char*patron;
+    char **archivos;
+    int cantidad;
+    int siguiente;
+    long *resultados;
+    pthread_mutex_t mutex;
+
+	// Para modo -p
+	int boolP;
+	int nThread;
+	int captured;
+	long totalLines;
+	pthread_cond_t cond;
+}DatosHilos;
+
+typedef struct{
+	DatosHilos* datos;
+	int id;
+}ArgThread;
+
+static long contar_archivo(const char *nombre, const char *patron){
+    FILE *archivo = fopen(nombre, "r");
+    if (archivo == NULL){
+	fprintf(stderr, "hgrep: %s: %s\n", nombre, strerror(errno));
+	return -1;
+    }
+    char *linea = NULL;
+    size_t capacidad = 0;
+    long conteo = 0;
+    while (getline(&linea, &capacidad, archivo) != -1){
+	if (strstr(linea, patron) != NULL){
+	    conteo++;
+	}
+    }
+    if (!feof(archivo)){
+	fprintf(stderr, "hgrep: %s: %s\n", nombre, strerror(errno));
+	conteo = -1;
+    }
+    free(linea);
+    fclose(archivo);
+    return conteo;
+}
+
+static void *buscar_hilo(void *argumento){
+	ArgHilo *arg = argumento;
+    DatosHilos *datos = arg->datos; // Si el no está el flag -p funciona normalmente
+    
+	while (1) {
+		// Particion dinamica de archivos
+		pthread_mutex_lock(&datos->mutex);
+		
+		//tomar el siguiente archivo libre
+		if (datos->siguiente == datos->cantidad){
+			pthread_mutex_unlock(&datos->mutex);
+			break;
+		}
+		int i = datos->siguiente;
+		datos->siguiente++;
+		pthread_mutex_unlock(&datos->mutex);
+
+		long count = contar_archivo(datos->archivos[i], datos->patron);
+		datos->resultados[i] = conteo;
+		if (conteo > 0) subtotal += conteo;
+    }
+
+	// Implementación -p
+	if (datos->boolP){
+		pthread_mutex_lock(&datos->mutex);
+		datos->totalLines += subtotal;
+		datos->captured++;
+		
+		if (datos->captured == datos->nThread){
+			pthread_cond_broadcast(&datos->cond);
+		} else{
+			while (datos->captured < datos->nthread){
+				pthread_cond_wait(&datos->cond, &datos->mutex);
+			}
+		}
+		long total = datos->totalLines;
+		pthread_mutex_unlock(&datos->mutex);
+
+		double porcentaje = (total > 0) ? (100.0 * (double)subtotal / (double)total) : 0.0;
+		printf("hilo %d: lineas (%.1f%% completado)\n", arg->id, subtotal, porcentaje);
+	}
+
+    return NULL;
+}
+
+static void buscar_hijo(int escritura, char *argv[], int argc, int turno, int procesos){
+    FILE *salida = fdopen(escritura, "w");
+    if (salida == NULL) {
+		perror("fdopen");
+		close(escritura);
+		_exit(2);
+    }
+
+    //Cada hijo toma los archivos de su turno
+    for (int i = 4 + turno; i < argc; i += procesos){
+		long conteo = contar_archivo(argv[i], argv[2]);
+		if (fprintf(salida, "%ld\n", conteo) < 0){
+			_exit(2);
+		}
+    }
+    if (fclose(salida) == EOF){
+		_exit(2);
+    }
+    _exit(0);
+}
+
+// Funcion para imprimir resultados y evitar repeticiones
+static int printResultados(char **archivos, const long *resultados, int cantidad, int error){
+	int coincidencias = 0;
+	for (int i = 0; i < cantidad; i++){
+		if (resultados[i] < 0){
+			error = 1;
+			continue;
+		}
+		if (cantidad > 1) printf("%s:", archivos[i]);
+		printf("%ld\n", resultados[i]);
+		if (resultados[i] > 0) coincidencias = 1;
+	}
+	if (error) return 2;
+	if (coincidencias) return 0;
+	return 1;
+}
+
+// Ejecucion en modo -f
+static int execProcesos(int argc, char *argv[]){
+	if (argc < 5){
+		fprintf(stder, "Uso: %s -f PATRON N ARCHIVO...\n", argv[0]);
+		return 2;
+	}
+
+	char *fin;
+	long cantidad = strtol(argv[3], &fin, 10);
+	if (fin == argv[3] || +fin != '\0' || cantidad < 1 || cantidad > N_THREAD){
+		fprintf(stderr, "El numero de procesos de ser un entero entre 1 y 64.\n");
+		return 2;
+	}
+
+	int archivos = argc - 4;
+	int procesos = (int)cantidad;
+	if (procesos > archivos) procesos = archivos; // Asegura que existan multiples procesos para un solo archivo
+	
+	long *resultados = malloc(archivos * sizeof(*resultados));
+	if (resultados == NULL){
+		perror("malloc");
+		return 2;
+	}
+	for (int i = 0; i < archivos; i++) resultados[i] = -1; // "vacia" el arreglo resultados sin liberar memoria
+
+	pid_t hijos[N_THREAD];
+	int lecturas[N_THREAD];
+	int creatos = 0;
+	int error = 0;
+
+	// Creacion procesos
+	for (int k = 0; k < procesos; k++){
+		int canal[2];
+		if (pipe(canal) == -1){
+			perror("pipe");
+			error = 1;
+			break;
+		}
+
+		pid_t hijo = fork();
+		if (hijo == -1){
+			perror("fork");
+			close(canal[0]);
+			close(canal[1]);
+			error = 1;
+			break;
+		}
+		if (hijo == 0){
+			close(canal[0]);
+			for (int j = 0; j < k; j++) close(lecturas[j]);
+			buscar_hijo(canal[1], argv, argc, k, procesos);
+		}
+		close(canal[1]);
+		hijos[k] = hijo;
+		lecturas[k] = canal[0];
+		creados++;
+	}
+
+	// Asignacion
+	for (int k = 0; k < creados; k++){
+		FILE *entrada = fdopen(lecturas[k], "r");
+		if (entrada == NULL){
+			perror("fdopen");
+			close(lecturas[k]);
+			error = 1;
+			continue;
+		}
+
+		int i = k;
+		long conteo;
+		while (fscanf(entrada, "%ld", &conteo) == 1){
+			if (i >= archivos){
+				error = 1;
+				break;
+			}
+			resultados[i] = conteo;
+			i += procesos;
+		}
+		if (!feof(entrada) || i < archivos) error = 1;
+		fclose(entrada);
+	}
+
+	// Clean up
+	for (int k = 0; k < creados; k++){
+		int estado;
+		if (waitpid(hijos[k], &estado, 0) =0 -1){
+			perror("waitpid");
+			error = 1;
+		} else if (WIFSIGNALED(estado)){
+			fprintf(stderr, "hgrep: hijo %d termino por la señal %d.\n", k + 1, WTERMSIG(estado));
+			error = 1;
+		} else if (!WIFEXITED(estado) || WEXITSTATUS(estado) != 0) error = 1;
+	}
+
+	int codigoSalida = printResultados(&argv[4], resultados, archivos, error);
+	free(resultados);
+	return codigoSalida;
+}
+
+static int execHilos(int argc, char *argv[], int boolP){
+	int offset = boolP ? 1 : 0; // Pregunta si existe el flag -p y ajusta la cantidad de argumentos minimos esperados
+
+	// control de argumentos
+	if (argc < 4 + offset){
+		fprintf(stderr, "Uso: %s [-p | -f] PATRON N ARCHIVO...\n", argv[0]);
+		return 2;
+	}
+
+	char *endPtr;
+	long nThread = strtol(argv[2 + offset], &endPtr, 10);
+	if (endPtr == argv[2 + offset] || *endPtr != '\0' || nThread < 1 || nThread > N_THREAD){
+		fprintf(stderr, "Uso: %s [-p | -f] PATRON N ARCHIVO... (N entre 1 y 64)\n", argv[0]);
+		return 2;
+	}
+
+	DatosHilos datos;
+	datos.patron = argv[1 + offset];
+	datos.archivos = &argv[3 + offset];
+	datos.cantidad = argc - (3 + offset);
+	datos.siguiente = 0;
+	datos.boolP = boolP;
+	datos.captured = 0;
+	datos.totalLines = 0;
+
+	if (nThread > datos.cantidad) nThread = datos.cantidad;
+	datos.nThread = (int)nThread;
+
+	datos.resultados = malloc(datos.cantidad * sizeof(*datos.resultados));
+	if (datos.resultados == NULL){
+		perror("malloc");
+		return 2;
+	}
+
+	if (pthread_mutex_init(&datos.mutex, NULL) != 0){
+		fprintf(stderr, "hgrep: no se pudo inicializar la variable condición(mutex)\n");
+		pthread_mutex_destroy(&datos.mutex);
+		free(datos.resultados);
+		return 2;
+	}
+
+	pthread_t hilos[N_THREAD];
+	ArgHilo args[N_THREAD];
+	int creados = 0;
+	for (int i = 0; i < nThread; i++){
+		args[i].datos = &datos;
+		args[i].id = i+1;
+		int codigo = pthread_create(&hilos[i], NULL, buscar_hilo, &args[i]);
+		if (codigo != 0){
+			fprintf(stderr, "hgrep: %s\n", strerror(codigo));
+			break;
+		}
+		creados++;
+	}
+
+	// Evitar bloque por fallo pthread_create con -p
+	if (boolP && creados < nThread){
+		pthread_mutex_lock(&datos.mutex);
+		datos.nThread = creados;
+		if (datos.captured == datos.nThread) pthread_cond_broadcast(&datos.cond);
+		pthread_mutex_unlock(&datos.mutex);
+	}
+
+	for (int i = 0; i < creados; i++) pthread_join(hilos[i], NULL);
+
+	int codigoSalida = 2;
+	if (creados == nTHread){
+		codigoSalida = printResultados(datos.archivos, datos.resultados, datos.cantidad, 0);
+	}
+
+	pthread_cond_destroy(&datos.cond);
+	pthread_mutex_destroy(&datos.mutex);
+	free(datos.resultados);
+	return codigoSalida;
+}
+
+int main(int argc, char* argv[]){
+	if (argc > 1 && strcmp(argv[1], "-f") == 0){
+		return execProcesos(argc, argv);
+	}
+	int boolP = (argc > 1 && strcmp(argv[1], "-p") == 0);
+	return execHilos(argc, argv, boolP);
+}[?2004h]0;thorne@Gabriel: ~/pss/tarea2[01;32mthorne@Gabriel[00m:[01;34m~/pss/tarea2[00m$ gcc -Wañ[Kll -Wextra -Wpedantic -std=c11 -g -pthread ser[Krc[K[K[Krc/hgrep.c -o hgrep
+[?2004l[01m[Ksrc/hgrep.c:[m[K In function ‘[01m[Kbuscar_hilo[m[K’:
+[01m[Ksrc/hgrep.c:58:9:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KArgHilo[m[K’
+   58 |         [01;31m[KArgHilo[m[K *arg = argumento;
+      |         [01;31m[K^~~~~~~[m[K
+[01m[Ksrc/hgrep.c:59:28:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kdatos[m[K’ in something not a structure or union
+   59 |     DatosHilos *datos = arg[01;31m[K->[m[Kdatos; // Si el no está el flag -p funciona normalmente
+      |                            [01;31m[K^~[m[K
+[01m[Ksrc/hgrep.c:75:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kconteo[m[K’ undeclared (first use in this function)
+   75 |                 datos->resultados[i] = [01;31m[Kconteo[m[K;
+      |                                        [01;31m[K^~~~~~[m[K
+[01m[Ksrc/hgrep.c:75:40:[m[K [01;36m[Knote: [m[Keach undeclared identifier is reported only once for each function it appears in
+[01m[Ksrc/hgrep.c:76:33:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubtotal[m[K’ undeclared (first use in this function)
+   76 |                 if (conteo > 0) [01;31m[Ksubtotal[m[K += conteo;
+      |                                 [01;31m[K^~~~~~~~[m[K
+[01m[Ksrc/hgrep.c:74:22:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcount[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-variable-Wunused-variable]8;;[m[K]
+   74 |                 long [01;35m[Kcount[m[K = contar_archivo(datos->archivos[i], datos->patron);
+      |                      [01;35m[K^~~~~[m[K
+[01m[Ksrc/hgrep.c:88:57:[m[K [01;31m[Kerror: [m[K‘[01m[KDatosHilos[m[K’ has no member named ‘[01m[Knthread[m[K’; did you mean ‘[01m[KnThread[m[K’?
+   88 |                         while (datos->captured < datos->[01;31m[Knthread[m[K){
+      |                                                         [01;31m[K^~~~~~~[m[K
+      |                                                         [32m[KnThread[m[K
+[01m[Ksrc/hgrep.c:96:68:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kid[m[K’ in something not a structure or union
+   96 |                 printf("hilo %d: lineas (%.1f%% completado)\n", arg[01;31m[K->[m[Kid, subtotal, porcentaje);
+      |                                                                    [01;31m[K^~[m[K
+[01m[Ksrc/hgrep.c:[m[K In function ‘[01m[KexecProcesos[m[K’:
+[01m[Ksrc/hgrep.c:143:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kstder[m[K’ undeclared (first use in this function); did you mean ‘[01m[Kstderr[m[K’?
+  143 |                 fprintf([01;31m[Kstder[m[K, "Uso: %s -f PATRON N ARCHIVO...\n", argv[0]);
+      |                         [01;31m[K^~~~~[m[K
+      |                         [32m[Kstderr[m[K
+[01m[Ksrc/hgrep.c:149:31:[m[K [01;31m[Kerror: [m[Kwrong type argument to unary plus
+  149 |         if (fin == argv[3] || [01;31m[K+[m[Kfin != '\0' || cantidad < 1 || cantidad > N_THREAD){
+      |                               [01;31m[K^[m[K
+[01m[Ksrc/hgrep.c:195:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kcreados[m[K’ undeclared (first use in this function); did you mean ‘[01m[Kcreatos[m[K’?
+  195 |                 [01;31m[Kcreados[m[K++;
+      |                 [01;31m[K^~~~~~~[m[K
+      |                 [32m[Kcreatos[m[K
+[01m[Ksrc/hgrep.c:225:51:[m[K [01;31m[Kerror: [m[Klvalue required as left operand of assignment
+  225 |                 if (waitpid(hijos[k], &estado, 0) [01;31m[K=[m[K0 -1){
+      |                                                   [01;31m[K^[m[K
+[01m[Ksrc/hgrep.c:167:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcreatos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-variable-Wunused-variable]8;;[m[K]
+  167 |         int [01;35m[Kcreatos[m[K = 0;
+      |             [01;35m[K^~~~~~~[m[K
+[01m[Ksrc/hgrep.c:[m[K In function ‘[01m[KexecHilos[m[K’:
+[01m[Ksrc/hgrep.c:281:9:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KArgHilo[m[K’
+  281 |         [01;31m[KArgHilo[m[K args[N_THREAD];
+      |         [01;31m[K^~~~~~~[m[K
+[01m[Ksrc/hgrep.c:284:24:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kdatos[m[K’ in something not a structure or union
+  284 |                 args[i][01;31m[K.[m[Kdatos = &datos;
+      |                        [01;31m[K^[m[K
+[01m[Ksrc/hgrep.c:285:24:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kid[m[K’ in something not a structure or union
+  285 |                 args[i][01;31m[K.[m[Kid = i+1;
+      |                        [01;31m[K^[m[K
+[01m[Ksrc/hgrep.c:305:24:[m[K [01;31m[Kerror: [m[K‘[01m[KnTHread[m[K’ undeclared (first use in this function); did you mean ‘[01m[KnThread[m[K’?
+  305 |         if (creados == [01;31m[KnTHread[m[K){
+      |                        [01;31m[K^~~~~~~[m[K
+      |                        [32m[KnThread[m[K
+[?2004h]0;thorne@Gabriel: ~/pss/tarea2[01;32mthorne@Gabriel[00m:[01;34m~/pss/tarea2[00m$ code src/hgrep.c
+[?2004l[?2004h]0;thorne@Gabriel: ~/pss/tarea2[01;32mthorne@Gabriel[00m:[01;34m~/pss/tarea2[00m$ code src/hgrep.cgcc -Wall -Wextra -Wpedantic -std=c11 -g -pthread src/hgrep.c -o hgrep
+[?2004l[01m[Ksrc/hgrep.c:[m[K In function ‘[01m[Kbuscar_hilo[m[K’:
+[01m[Ksrc/hgrep.c:97:45:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K[01;32m[K%f[m[K[m[K’ expects argument of type ‘[01m[K[01;32m[Kdouble[m[K[m[K’, but argument 3 has type ‘[01m[K[01;34m[Klong int[m[K[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wformat-Wformat=]8;;[m[K]
+   97 |                 printf("hilo %d: lineas ([01;32m[K%[m[K[01;32m[K.[m[K[01;32m[K1[m[K[01;32m[Kf[m[K%% completado)\n", arg->id, [01;34m[Ks[m[K[01;34m[Ku[m[K[01;34m[Kb[m[K[01;34m[Kt[m[K[01;34m[Ko[m[K[01;34m[Kt[m[K[01;34m[Ka[m[K[0
